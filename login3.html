@@ -1,0 +1,134 @@
+<html>
+<head>
+  <title>Login Page</title>
+<link rel="stylesheet" href="style.css">
+  <style>
+body{
+	background-color:#191919;
+	font-family:'Poppin',sans-serif;
+	
+}
+
+    
+    .container {
+     width:360px;
+	height:280px;
+	margin:auto;
+	margin:auto;
+	border-radius:3px;
+	background-color:#fff;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #44318D;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #44318D;
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 10px;
+form{
+	width:300px;
+	margin-left:20px;
+}
+
+form label{
+	display:flex;
+	margin-top:20px;
+	font-size:18px;
+}
+
+form input{
+	width:100%;
+	padding:7px;
+	border:none;
+	border:1px solid gray;
+	border-radius:6px;
+	outline:none;
+}
+
+input[type="button"]{
+	width:320px;
+	height:35px;
+	margin-top:20px;
+	border:none;
+	background-color:#49c1a2;
+	color:white;
+	font-size:18px;
+
+}
+
+p{
+	text-align:center;
+	padding-top:20px;
+	font-size:15px;
+}
+    }
+  </style>
+</head>
+<div class="banner">
+            <div class="navbar">
+<body >
+  <div class="container">
+    <h2>Login</h2>
+    <form id="login-form" action="" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Login">
+    </form>
+    <div id="error-message" class="error-message" style="display: none;"></div>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Get input values
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Check username and password
+      if (username === 'Anugraha' && password === 'anugraha@2403') {
+        // Successful login
+        // Redirect or perform other actions here
+        alert('Login successful!');
+      } else {
+        // Failed login
+        var errorMessage = document.getElementById('error-message');
+        errorMessage.innerHTML = 'Invalid username or password.';
+        errorMessage.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

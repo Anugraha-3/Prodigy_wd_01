@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="signup.css">
+	<link href="https://fonts.googleapis.com/css2?family" rel="stylesheet">
+</head>
+<body>
+	<div class="login-box">
+		<h1>Login</h1>
+ <form id="login-form" action="" method="POST">
+	        <label>Email</label>
+		<input type="email" id ="email" placeholder="">
+		<label>Password</label>
+		<input type="password" id="password"  placeholder="">
+		<input type="button" value="Submit">
+
+</form>
+<div id="error-message" class="error-message" style="display: none;"></div>
+  </div>
+
+</div>
+<p class="para-2">Not have an account?<a href="signin.html">Sign Up Here</a></p>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Get input values
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      // Check username and password
+      if (username === 'Anugraha' && password === 'anugraha@2403') {
+        // Successful login
+        // Redirect or perform other actions here
+        alert('Login successful!');
+      } else {
+        // Failed login
+        var errorMessage = document.getElementById('error-message');
+        errorMessage.innerHTML = 'Invalid username or password.';
+        errorMessage.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
